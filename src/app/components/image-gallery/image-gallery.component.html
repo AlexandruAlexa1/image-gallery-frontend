@@ -1,0 +1,5 @@
+<div *ngFor="let image of images">
+    <img [src]="image.url" [alt]="image.fileName" width="500"/>
+    <p>{{ image.fileName }}</p>
+    <button (click)="deleteImage(image.id)">Delete</button>
+</div>
