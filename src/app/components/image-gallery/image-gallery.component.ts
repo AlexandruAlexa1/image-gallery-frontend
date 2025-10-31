@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ImageService } from '../../services/image.service';
 import { ImageMetadata } from '../../models/image-metadata.model';
 import { CommonModule } from '@angular/common';
@@ -10,14 +10,13 @@ import { ImageStateService } from '../../services/image-state.service';
   styleUrls: ['./image-gallery.component.scss'],
   imports: [CommonModule]
 })
-export class ImageGalleryComponent {
+export class ImageGalleryComponent implements OnInit {
+  private imageService = inject(ImageService);
+  private imageState = inject(ImageStateService);
 
   images: ImageMetadata[] = [];
 
-  constructor(
-    private imageService: ImageService,
-    private imageState: ImageStateService
-  ) {
+  constructor() {
     this.loadImages();
   }
 

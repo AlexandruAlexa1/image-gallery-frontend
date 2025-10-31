@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ImageMetadata } from '../models/image-metadata.model';
@@ -8,9 +8,9 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class ImageService {
-  private apiUrl = environment.apiUrl;
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { }
+  private apiUrl = environment.apiUrl;
 
   getAllImages(): Observable<ImageMetadata[]> {
     return this.http.get<ImageMetadata[]>(this.apiUrl);

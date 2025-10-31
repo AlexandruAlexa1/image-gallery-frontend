@@ -10,8 +10,6 @@ export class ImageStateService {
   private imagesSubject = new BehaviorSubject<ImageMetadata[]>([]);
   images$ = this.imagesSubject.asObservable();
 
-  constructor() { }
-
   setImages(images: ImageMetadata[]) {
     this.imagesSubject.next(images);
   }
