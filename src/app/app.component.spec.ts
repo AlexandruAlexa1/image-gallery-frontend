@@ -1,14 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ImageService } from './services/image.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      declarations: [AppComponent],
-      providers: [ImageService]
+      imports: [AppComponent, HttpClientTestingModule],
     }).compileComponents();
   });
 
