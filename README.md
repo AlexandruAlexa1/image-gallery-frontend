@@ -11,10 +11,11 @@
 ![Stars](https://img.shields.io/github/stars/AlexandruAlexa1/image-gallery-frontend)
 
 
-An **Angular** application to upload and view images, consuming the **[Image Gallery API](https://github.com/AlexandruAlexa1/image-gallery)** backend.  
+An **Angular** application to upload and view images, consuming the **[Image Gallery API](https://github.com/AlexandruAlexa1/image-gallery-api)** backend.  
 Demonstrates modern frontend architecture, reactive state management, and full **AWS cloud deployment** using **S3** and **CloudFront**.
 
 🖥 **Live Demo:** []()  
+📄 **Test Report:** [View Coverage Report](https://alexandrualexa1.github.io/image-gallery-frontend/) 
 
 ---
 
