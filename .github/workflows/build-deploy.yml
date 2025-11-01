@@ -55,14 +55,14 @@ jobs:
       - name: 📄 Prepare test report
         run: |
           mkdir -p test-report
-          cp -r coverage/* test-report/
+          cp -r coverage/*/* test-report/
           cp test-report/index.html test-report/404.html || true
-
+          
       - name: 📤 Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: test-report
-
+          
       - name: ⚙️ Configure GitHub Pages
         uses: actions/configure-pages@v3
 
